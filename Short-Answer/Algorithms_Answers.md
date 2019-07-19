@@ -2,7 +2,7 @@ Add your answers to the Algorithms exercises here.
 
 **Exercise 1:**
 
-a) *O(c)* - This algorithm is ultimately running 1 loop with an equation. A single loop has a time complexity of O(n) or linear time, which takes dominance over the equation time complexity of O(c) or constant time.
+a) *O(n)* - This algorithm is ultimately running 1 loop with an equation. A single loop has a time complexity of O(n) or linear time, which takes dominance over the equation time complexity of O(c) or constant time.
 
 b) *O(n^3)* - This algorithm contains a nested for loop of 4 levels. Each loop should have a time complexity of O(n), resulting in total time complexity of O(n^4). However, the last loop will actually run a constant number of times (10 times), resulting in its time complexity of O(c). Therefore, the time complexity of this algorithm is O(n^3)
 
