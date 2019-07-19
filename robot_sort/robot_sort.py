@@ -100,36 +100,25 @@ class SortingRobot:
         """
         # Fill this out
 
-        while self.can_move_right():  # is true
+        while self.can_move_right():
+            # if held card < table card or None (anything but 1) SWAP
+            # Regardless, always move right
 
-            # what I'm holding > card on table
-            # don't switch, look at next item to right
-            if self.compare_item() == 1:
-                self.move_right()
-
-            # what I'm holding is < card on table (or None)
-            # switch, look at next item to right
-            else:
-                # print("Was holding: ", self._item)
-                # print("Then saw: ", self._list[self._position])
+            if self.compare_item() != 1:
                 self.swap_item()
-                # print("Swap. Now Holding: ", self._item)
-                self.move_right()
 
-        while self.can_move_left():  # is true
+            self.move_right()
 
-            # held is greater than table
-            # switch, move left
+        while self.can_move_left():
+            # if held card > than table card SWAP
+            # Regardless, always move left
+
             if self.compare_item() == 1:
                 self.swap_item()
-                self.move_left()
 
-            # held is smaller than table or None
-            # don't switch, move left
-            else:
-                self.move_left()
+            self.move_left()
 
-        return self.is_None_in_list()  # checks if None is still in list
+        return self.is_None_in_list()
 
     def is_None_in_list(self):
         """
